@@ -11,26 +11,26 @@ class Score(Turtle):
         self.penup()
         self.score_left = 0
         self.score_right = 0
-        self.left_score()
-        self.right_score()
+        self.update_score()
+        
 
-    def left_score(self):
+    def update_score(self):
+        self.clear()
         self.goto(-100, 200)
         self.write(f"{self.score_left}", True, "center", FONT)
-
-    def right_score(self):
+      
         self.goto(100, 200)
         self.write(f"{self.score_right}", True, "center", FONT)
 
-    def update_left_score(self):
-        self.clear()
+    def update_left_score(self): 
         self.score_left += 1
 
-    def update_right_score(self):
-        self.clear()
+    def update_right_score(self): 
         self.score_right += 1
 
     def game_over(self):
         self.goto(0,0)
         self.color("red")
         self.write(f"GAME OVER",True,"center",FONT)
+
+
