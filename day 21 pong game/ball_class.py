@@ -37,6 +37,9 @@ class Ball(Turtle):
         self.collison_x()
 
    
+   
+
+   
 
             
         
